@@ -1,0 +1,9 @@
+baseURL = 'https://laurenhendriks.nl/'
+languageCode = 'nl'
+title = 'Lauren Hendriks'
+theme = 'laurenhendriks'
+
+[params]
+  description = 'Orthomoleculair therapeut | voeding · gezondheid · leefstijl'
+  formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID'
+  hasPhoto = false
