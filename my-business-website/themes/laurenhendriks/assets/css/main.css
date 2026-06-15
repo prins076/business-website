@@ -137,6 +137,8 @@ img { max-width: 100%; height: auto; display: block; }
   background-position: center;
   opacity: 0.1;
   pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 55% 50% at center, transparent 30%, black 70%);
+  mask-image: radial-gradient(ellipse 55% 50% at center, transparent 30%, black 70%);
 }
 .hero__content { position: relative; z-index: 1; max-width: 700px; }
 .hero__name {
