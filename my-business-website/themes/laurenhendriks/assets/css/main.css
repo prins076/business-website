@@ -1,10 +1,11 @@
 /* ─── Variables ─────────────────────────────────────────── */
 :root {
-  --color-primary:   #2D4A3E;
-  --color-secondary: #6B8F71;
-  --color-bg:        #F5F0E8;
-  --color-surface:   #E8DFD0;
-  --color-text:      #2C2C2C;
+  --color-primary:   #2E3D34;  /* Deep Botanical Green — nav, hero, footer, headings */
+  --color-secondary: #4F6A52;  /* Deep Moss Green — secondary accents */
+  --color-accent:    #7A8768;  /* Muted Olive — main brand color, borders, dividers */
+  --color-bg:        #F4F1EC;  /* Warm Ivory */
+  --color-surface:   #E8E2D8;  /* Soft Sand */
+  --color-text:      #2B2B2B;  /* Charcoal */
   --color-light:     #FAFAF7;
   --color-white:     #FFFFFF;
 
@@ -39,7 +40,7 @@ img { max-width: 100%; height: auto; display: block; }
 .section-divider {
   width: 50px;
   height: 2px;
-  background: var(--color-secondary);
+  background: var(--color-accent);
   margin: 1.25rem auto 2rem;
 }
 .section-divider--left { margin-left: 0; }
@@ -62,7 +63,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--color-white);
   border-color: var(--color-primary);
 }
-.btn--primary:hover  { background: var(--color-secondary); border-color: var(--color-secondary); }
+.btn--primary:hover  { background: var(--color-secondary); border-color: var(--color-secondary); opacity: 0.92; }
 .btn--light {
   background: transparent;
   color: var(--color-white);
@@ -75,7 +76,7 @@ img { max-width: 100%; height: auto; display: block; }
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 100;
-  background: rgba(45,74,62,0.97);
+  background: rgba(46,61,52,0.97);
   backdrop-filter: blur(8px);
 }
 .nav__container {
@@ -176,7 +177,7 @@ img { max-width: 100%; height: auto; display: block; }
   border-radius: var(--radius);
   padding: 2.5rem 2rem;
   text-align: center;
-  border-top: 3px solid var(--color-secondary);
+  border-top: 3px solid var(--color-accent);
 }
 .pillar h3 { color: var(--color-primary); margin-bottom: 0.75rem; }
 .pillar p  { font-size: 0.95rem; line-height: 1.6; }
@@ -208,7 +209,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-secondary);
+  color: var(--color-accent);
   font-family: var(--font-heading);
   font-style: italic;
   font-size: 1rem;
@@ -222,7 +223,7 @@ img { max-width: 100%; height: auto; display: block; }
 .about__credentials h3  { color: var(--color-primary); margin-bottom: 1rem; font-size: 1.15rem; }
 .about__credentials ul  { list-style: none; }
 .about__credentials li  { padding: 0.4rem 0 0.4rem 1.4rem; position: relative; font-size: 0.97rem; }
-.about__credentials li::before { content: '·'; position: absolute; left: 0; color: var(--color-secondary); font-size: 1.4rem; line-height: 1; top: 0.3rem; }
+.about__credentials li::before { content: '·'; position: absolute; left: 0; color: var(--color-accent); font-size: 1.4rem; line-height: 1; top: 0.3rem; }
 
 /* ─── Aanbod ────────────────────────────────────────────── */
 .aanbod { padding: 5rem 0; }
@@ -249,7 +250,7 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--color-surface);
   border-radius: var(--radius);
   padding: 2rem;
-  border-left: 3px solid var(--color-secondary);
+  border-left: 3px solid var(--color-accent);
 }
 .option-card h3 { color: var(--color-primary); margin-bottom: 0.75rem; font-size: 1.1rem; }
 .option-card p  { font-size: 0.95rem; }
@@ -301,7 +302,7 @@ img { max-width: 100%; height: auto; display: block; }
   transition: border-color 0.2s;
 }
 .form-group input:focus,
-.form-group textarea:focus  { outline: none; border-color: var(--color-secondary); }
+.form-group textarea:focus  { outline: none; border-color: var(--color-accent); }
 .form-group textarea { resize: vertical; min-height: 150px; }
 .contact-form .btn  { align-self: flex-start; }
 
