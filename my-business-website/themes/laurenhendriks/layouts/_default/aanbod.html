@@ -1,0 +1,56 @@
+{{ define "main" }}
+<header class="page-header">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-header__sub">{{ . }}</p>{{ end }}
+  </div>
+</header>
+
+<section class="aanbod">
+  <div class="container">
+
+    <div class="intake-card">
+      <h2>Kennismakingsgesprek &amp; intake</h2>
+      <p>Elk traject begint met een persoonlijk kennismakingsgesprek. Hier leer ik je kennen: jouw klachten, jouw doelen en jouw leefstijl. Op basis van dit gesprek bepalen we samen welke stap het beste bij jou past — geen aannames, geen standaardoplossingen.</p>
+      <a href="{{ "/contact/" | relURL }}" class="btn btn--light">Plan een kennismaking</a>
+    </div>
+
+    <div class="options-section">
+      <h2>Wat kan er volgen?</h2>
+      <div class="section-divider"></div>
+      <p>Afhankelijk van de intake adviseer ik wat het beste bij jouw situatie past. Dat kan zijn:</p>
+      <div class="options-grid">
+        <div class="option-card">
+          <h3>Voeding &amp; suppletie</h3>
+          <p>Gerichte adviezen op het gebied van voeding en orthomoleculaire suppletie, afgestemd op jouw klachtenpatroon.</p>
+        </div>
+        <div class="option-card">
+          <h3>Leefstijlbegeleiding</h3>
+          <p>Praktische handvatten rondom slaap, stress, beweging en andere leefstijlfactoren die bijdragen aan jouw herstel en vitaliteit.</p>
+        </div>
+        <div class="option-card">
+          <h3>Een begeleidingstraject</h3>
+          <p>Voor wie meer diepgang zoekt: persoonlijke begeleiding over een langere periode, volledig op maat.</p>
+        </div>
+      </div>
+    </div>
+
+    {{ with .Params.programs }}
+    <div class="programs-section">
+      <h2>Trajecten</h2>
+      <div class="section-divider"></div>
+      <p>Voor wie een dieper traject past, bied ik de volgende begeleiding aan. Hoe lang een traject duurt verschilt per persoon — dat kan weken zijn, maar ook maanden.</p>
+      <div class="programs-grid">
+        {{ range . }}
+        <div class="program-card">
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}
