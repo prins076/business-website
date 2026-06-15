@@ -364,6 +364,14 @@ img { max-width: 100%; height: auto; display: block; }
 .form-group textarea:focus  { outline: none; border-color: var(--color-accent); }
 .form-group textarea { resize: vertical; min-height: 150px; }
 .contact-form .btn  { align-self: flex-start; }
+/* Honeypot: positioned off-screen so bots fill it but users never see it */
+.form-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 /* ─── Footer ────────────────────────────────────────────── */
 .footer {
