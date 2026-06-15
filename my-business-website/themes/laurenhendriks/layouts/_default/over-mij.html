@@ -1,0 +1,43 @@
+{{ define "main" }}
+<header class="page-header">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-header__sub">{{ . }}</p>{{ end }}
+  </div>
+</header>
+
+<section class="about">
+  <div class="container about__grid">
+
+    <div>
+      {{ if .Site.Params.hasPhoto }}
+      <div class="about__image">
+        <img src="/images/lauren-photo.jpg" alt="Lauren Hendriks">
+      </div>
+      {{ else }}
+      <div class="about__image-placeholder">
+        <p>Foto van Lauren<br>volgt binnenkort</p>
+      </div>
+      {{ end }}
+    </div>
+
+    <div class="about__content">
+      <h2>{{ .Params.subtitle | default "Wie ben ik?" }}</h2>
+      <div class="section-divider section-divider--left"></div>
+      {{ .Content }}
+
+      {{ with .Params.credentials }}
+      <div class="about__credentials">
+        <h3>Opleiding &amp; certificering</h3>
+        <ul>
+          {{ range . }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+{{ end }}
