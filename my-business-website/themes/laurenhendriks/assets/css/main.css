@@ -116,6 +116,30 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .nav__links .nav__cta:hover { background: rgba(255,255,255,0.1); border-color: var(--color-white); }
 
+/* Hamburger toggle — hidden on desktop */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.nav__toggle-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-white);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.nav--open .nav__toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav--open .nav__toggle-bar:nth-child(2) { opacity: 0; }
+.nav--open .nav__toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ─── Hero ──────────────────────────────────────────────── */
 .hero {
   position: relative;
@@ -201,6 +225,30 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .page-header h1     { color: var(--color-white); font-weight: 300; font-style: italic; }
 .page-header__sub   { color: rgba(255,255,255,0.7); margin-top: 0.75rem; font-size: 1.05rem; }
+
+/* ─── 404 ───────────────────────────────────────────────── */
+.error-page {
+  min-height: 70vh;
+  padding: 10rem 1.5rem 6rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.error-page .container { width: 100%; }
+.error-page__code {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 14vw, 8rem);
+  font-style: italic;
+  line-height: 1;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+.error-page h1 { color: var(--color-primary); font-weight: 300; font-style: italic; }
+.error-page__text {
+  max-width: 460px;
+  margin: 0 auto 2rem;
+  color: var(--color-text);
+}
 
 /* ─── Over mij ──────────────────────────────────────────── */
 .about { padding: 5rem 0; }
@@ -333,11 +381,46 @@ img { max-width: 100%; height: auto; display: block; }
   .about__grid   { grid-template-columns: 1fr; }
   .contact__grid { grid-template-columns: 1fr; }
   .intake-card   { padding: 2rem 1.5rem; }
-  .nav__links    { gap: 1rem; }
-  .nav__links a  { font-size: 0.78rem; }
+
+  .nav__toggle { display: flex; }
+  .nav__links {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: rgba(46,61,52,0.98);
+    backdrop-filter: blur(8px);
+    padding: 0.5rem 1.5rem 1rem;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    /* hidden by default; revealed via .nav--open */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height 0.3s ease, opacity 0.25s ease, visibility 0.25s;
+  }
+  .nav--open .nav__links {
+    max-height: 80vh;
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav__links li { width: 100%; }
+  .nav__links a {
+    display: block;
+    padding: 0.9rem 0;
+    font-size: 0.9rem;
+  }
+  .nav__links .nav__cta {
+    border: none;
+    border-radius: 0;
+    padding: 0.9rem 0;
+  }
+  .nav__links .nav__cta:hover { background: transparent; }
 }
 
 @media (max-width: 480px) {
-  .nav__links .nav__cta { display: none; }
   .hero { min-height: 90vh; }
 }

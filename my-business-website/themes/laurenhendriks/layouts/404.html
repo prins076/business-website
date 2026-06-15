@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="error-page">
+  <div class="container">
+    <p class="error-page__code">404</p>
+    <h1>Deze pagina bestaat niet</h1>
+    <div class="section-divider"></div>
+    <p class="error-page__text">De pagina die je zoekt is verplaatst of bestaat niet meer. Geen zorgen — laten we je weer op weg helpen.</p>
+    <a href="{{ "/" | relURL }}" class="btn btn--primary">Terug naar home</a>
+  </div>
+</section>
+{{ end }}

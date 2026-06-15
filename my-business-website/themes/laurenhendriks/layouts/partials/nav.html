@@ -1,11 +1,35 @@
-<nav class="nav">
+<nav class="nav" aria-label="Hoofdnavigatie">
   <div class="nav__container">
     <a href="{{ "/" | relURL }}" class="nav__logo">Lauren Hendriks</a>
-    <ul class="nav__links">
-      <li><a href="{{ "/" | relURL }}"{{ if .IsHome }} class="nav__link--active"{{ end }}>Home</a></li>
-      <li><a href="{{ "/over-mij/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/over-mij" }} class="nav__link--active"{{ end }}>Over mij</a></li>
-      <li><a href="{{ "/aanbod/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/aanbod" }} class="nav__link--active"{{ end }}>Aanbod</a></li>
-      <li><a href="{{ "/contact/" | relURL }}" class="nav__cta{{ if strings.HasPrefix .RelPermalink "/contact" }} nav__link--active{{ end }}">Contact</a></li>
+    <button class="nav__toggle" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="nav-menu">
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+      <span class="nav__toggle-bar"></span>
+    </button>
+    <ul class="nav__links" id="nav-menu">
+      <li><a href="{{ "/" | relURL }}"{{ if .IsHome }} class="nav__link--active" aria-current="page"{{ end }}>Home</a></li>
+      <li><a href="{{ "/over-mij/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/over-mij" }} class="nav__link--active" aria-current="page"{{ end }}>Over mij</a></li>
+      <li><a href="{{ "/aanbod/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/aanbod" }} class="nav__link--active" aria-current="page"{{ end }}>Aanbod</a></li>
+      <li><a href="{{ "/contact/" | relURL }}" class="nav__cta{{ if strings.HasPrefix .RelPermalink "/contact" }} nav__link--active{{ end }}"{{ if strings.HasPrefix .RelPermalink "/contact" }} aria-current="page"{{ end }}>Contact</a></li>
     </ul>
   </div>
 </nav>
+<script>
+  (function () {
+    var nav = document.querySelector('.nav');
+    var toggle = nav.querySelector('.nav__toggle');
+    var menu = nav.querySelector('.nav__links');
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('nav--open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Menu sluiten' : 'Menu openen');
+    });
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        nav.classList.remove('nav--open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Menu openen');
+      }
+    });
+  })();
+</script>
