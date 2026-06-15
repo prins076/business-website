@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero__content">
+    <h1 class="hero__name">Lauren Hendriks</h1>
+    <div class="hero__divider"></div>
+    <p class="hero__tagline">voeding · gezondheid · leefstijl</p>
+    <a href="{{ "/aanbod/" | relURL }}" class="btn btn--light">Bekijk het aanbod</a>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container">
+    <div class="intro__text">{{ .Content }}</div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="container pillars__grid">
+    {{ range .Params.pillars }}
+    <div class="pillar">
+      <h3>{{ .title }}</h3>
+      <p>{{ .text }}</p>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
