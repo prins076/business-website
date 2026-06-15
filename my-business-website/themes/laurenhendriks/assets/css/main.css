@@ -120,9 +120,10 @@ img { max-width: 100%; height: auto; display: block; }
 .hero {
   min-height: 100vh;
   background-color: var(--color-primary);
-  background-image: url('/images/fern.svg');
-  background-size: 180px;
+  background-image: url('/images/fern.png');
+  background-size: 340px;
   background-repeat: repeat;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
