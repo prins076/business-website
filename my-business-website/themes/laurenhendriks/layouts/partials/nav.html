@@ -1,0 +1,11 @@
+<nav class="nav">
+  <div class="nav__container">
+    <a href="{{ "/" | relURL }}" class="nav__logo">Lauren Hendriks</a>
+    <ul class="nav__links">
+      <li><a href="{{ "/" | relURL }}"{{ if .IsHome }} class="nav__link--active"{{ end }}>Home</a></li>
+      <li><a href="{{ "/over-mij/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/over-mij" }} class="nav__link--active"{{ end }}>Over mij</a></li>
+      <li><a href="{{ "/aanbod/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/aanbod" }} class="nav__link--active"{{ end }}>Aanbod</a></li>
+      <li><a href="{{ "/contact/" | relURL }}" class="nav__cta{{ if strings.HasPrefix .RelPermalink "/contact" }} nav__link--active{{ end }}">Contact</a></li>
+    </ul>
+  </div>
+</nav>
