@@ -98,7 +98,7 @@ Structured around Lauren's actual client process — not a sales funnel.
 
 ### Typography
 - **Headings:** Cormorant Garamond (Google Fonts) — elegant serif, botanical feel
-- **Body:** Lato or Inter (Google Fonts) — clean, readable sans-serif
+- **Body:** Lato (Google Fonts) — clean, readable sans-serif
 
 ### Fern motifs
 - White fern SVG as subtle repeating pattern in the hero background
