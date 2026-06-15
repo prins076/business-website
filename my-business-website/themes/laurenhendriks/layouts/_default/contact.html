@@ -1,0 +1,21 @@
+{{ define "main" }}
+<header class="page-header">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-header__sub">{{ . }}</p>{{ end }}
+  </div>
+</header>
+
+<section class="contact">
+  <div class="container contact__grid">
+    <div class="contact__info">
+      <h2>Neem contact op</h2>
+      <div class="section-divider section-divider--left"></div>
+      {{ .Content }}
+    </div>
+    <div>
+      {{ partial "contact-form.html" . }}
+    </div>
+  </div>
+</section>
+{{ end }}
