@@ -118,19 +118,29 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ─── Hero ──────────────────────────────────────────────── */
 .hero {
+  position: relative;
   min-height: 100vh;
   background-color: var(--color-primary);
-  background-image: url('/images/fern.png');
-  background-size: 340px;
-  background-repeat: repeat;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 6rem 1.5rem 4rem;
 }
-.hero__content { max-width: 700px; }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('/images/fern.png');
+  background-size: 340px;
+  background-repeat: repeat;
+  background-position: center;
+  filter: invert(1);
+  mix-blend-mode: screen;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.hero__content { position: relative; z-index: 1; max-width: 700px; }
 .hero__name {
   color: var(--color-white);
   font-weight: 300;
