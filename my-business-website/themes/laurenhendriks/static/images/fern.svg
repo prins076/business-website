@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 160" fill="none">
+  <line x1="40" y1="155" x2="40" y2="15" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.55"/>
+  <path d="M40 135 Q22 120 14 118" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40 115 Q20 98 10 94"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40 95  Q20 77 11 72"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40 76  Q22 58 15 52"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40 57  Q25 41 20 35"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <path d="M40 40  Q28 26 25 20"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+  <path d="M40 135 Q58 120 66 118" stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40 115 Q60 98 70 94"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40 95  Q60 77 69 72"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40 76  Q58 58 65 52"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.45"/>
+  <path d="M40 57  Q55 41 60 35"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+  <path d="M40 40  Q52 26 55 20"  stroke="white" stroke-width="1" stroke-linecap="round" opacity="0.35"/>
+</svg>
