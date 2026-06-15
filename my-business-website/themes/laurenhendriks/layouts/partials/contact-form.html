@@ -11,5 +11,10 @@
     <label for="message">Bericht</label>
     <textarea id="message" name="message" rows="6" required placeholder="Schrijf hier je bericht..."></textarea>
   </div>
+  {{/* Honeypot — hidden from users; bots fill it and Formspree drops the submission */}}
+  <div class="form-honeypot" aria-hidden="true">
+    <label for="company">Laat dit veld leeg</label>
+    <input type="text" id="company" name="_gotcha" tabindex="-1" autocomplete="off">
+  </div>
   <button type="submit" class="btn btn--primary">Verstuur bericht</button>
 </form>
