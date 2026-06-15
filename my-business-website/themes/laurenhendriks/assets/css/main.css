@@ -135,7 +135,7 @@ img { max-width: 100%; height: auto; display: block; }
   background-size: 520px;
   background-repeat: repeat;
   background-position: center;
-  opacity: 0.18;
+  opacity: 0.1;
   pointer-events: none;
 }
 .hero__content { position: relative; z-index: 1; max-width: 700px; }
