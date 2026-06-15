@@ -3,6 +3,9 @@ locale = 'nl'
 title = 'Lauren Hendriks'
 theme = 'laurenhendriks'
 
+# No blog/taxonomies on this site — disable the default tags & categories
+[taxonomies]
+
 [params]
   description = 'Orthomoleculair therapeut | voeding · gezondheid · leefstijl'
   formspreeEndpoint = 'https://formspree.io/f/mbdewjlp'
