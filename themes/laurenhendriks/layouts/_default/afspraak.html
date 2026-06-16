@@ -1,0 +1,15 @@
+{{ define "main" }}
+<header class="page-header">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-header__sub">{{ . }}</p>{{ end }}
+  </div>
+</header>
+
+<section class="booking-section">
+  <div class="container">
+    <div class="booking-section__intro">{{ .Content }}</div>
+    {{ partial "booking.html" . }}
+  </div>
+</section>
+{{ end }}

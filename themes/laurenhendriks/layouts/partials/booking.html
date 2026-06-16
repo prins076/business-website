@@ -1,0 +1,31 @@
+{{ if and .Site.Params.hasCalendly .Site.Params.calendlyUrl }}
+<div class="booking" data-calendly-url="{{ .Site.Params.calendlyUrl }}">
+  <div class="booking__cover" id="booking-cover">
+    <p class="booking__cover-text">Klik om de agenda te laden en een moment te kiezen.</p>
+    <button type="button" class="btn btn--primary" id="booking-load">Plan je gesprek</button>
+    <p class="booking__note">De agenda wordt geladen via Calendly zodra je klikt.</p>
+  </div>
+</div>
+<script>
+  (function () {
+    var wrap = document.querySelector('.booking');
+    if (!wrap) return;
+    var btn = document.getElementById('booking-load');
+    btn.addEventListener('click', function () {
+      var url = wrap.getAttribute('data-calendly-url');
+      var iframe = document.createElement('iframe');
+      iframe.src = url;
+      iframe.title = 'Calendly afsprakenplanner';
+      iframe.className = 'booking__frame';
+      iframe.loading = 'lazy';
+      wrap.innerHTML = '';
+      wrap.appendChild(iframe);
+    });
+  })();
+</script>
+{{ else }}
+<div class="booking booking--fallback">
+  <p>Online plannen is binnenkort beschikbaar. Neem voor nu gerust
+     <a href="{{ "/contact/" | relURL }}">contact</a> met me op, dan plannen we samen een moment.</p>
+</div>
+{{ end }}
