@@ -10,9 +10,18 @@
   <div class="container about__grid">
 
     <div>
-      {{ if .Site.Params.hasPhoto }}
+      {{ $img := resources.Get "images/lauren-photo.jpg" }}
+      {{ if and .Site.Params.hasPhoto $img }}
+      {{ $small := $img.Resize "400x webp q82" }}
+      {{ $medium := $img.Resize "800x webp q82" }}
+      {{ $large := $img.Resize "1200x webp q82" }}
       <div class="about__image">
-        <img src="/images/lauren-photo.jpg" alt="Lauren Hendriks">
+        <img
+          src="{{ $medium.RelPermalink }}"
+          srcset="{{ $small.RelPermalink }} 400w, {{ $medium.RelPermalink }} 800w, {{ $large.RelPermalink }} 1200w"
+          sizes="(max-width: 600px) 100vw, 400px"
+          width="{{ $medium.Width }}" height="{{ $medium.Height }}"
+          alt="Lauren Hendriks" loading="lazy" decoding="async">
       </div>
       {{ else }}
       <div class="about__image-placeholder">

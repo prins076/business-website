@@ -1,0 +1,18 @@
+{{ with hugo.Data.testimonials }}
+<section class="testimonials">
+  <div class="container">
+    <h2 class="testimonials__heading">Ervaringen</h2>
+    <div class="section-divider"></div>
+    <div class="testimonials__grid">
+      {{ range . }}
+      <figure class="testimonial" data-reveal>
+        <blockquote class="testimonial__quote">{{ .quote }}</blockquote>
+        <figcaption class="testimonial__cite">
+          {{ .name }}{{ with .context }} <span class="testimonial__context">· {{ . }}</span>{{ end }}
+        </figcaption>
+      </figure>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,7 @@
+# Vul aan met echte (geanonimiseerde) ervaringen. Alleen voornaam.
+- quote: "Placeholder-ervaring. Vervang door een echte quote van een cliënt."
+  name: "Voornaam"
+  context: "na een leefstijltraject"
+- quote: "Tweede placeholder-ervaring. Vervang door een echte quote."
+  name: "Voornaam"
+  context: ""

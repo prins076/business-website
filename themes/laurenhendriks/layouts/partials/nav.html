@@ -10,7 +10,8 @@
       <li><a href="{{ "/" | relURL }}"{{ if .IsHome }} class="nav__link--active" aria-current="page"{{ end }}>Home</a></li>
       <li><a href="{{ "/over-mij/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/over-mij" }} class="nav__link--active" aria-current="page"{{ end }}>Over mij</a></li>
       <li><a href="{{ "/aanbod/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/aanbod" }} class="nav__link--active" aria-current="page"{{ end }}>Aanbod</a></li>
-      <li><a href="{{ "/contact/" | relURL }}" class="nav__cta{{ if strings.HasPrefix .RelPermalink "/contact" }} nav__link--active{{ end }}"{{ if strings.HasPrefix .RelPermalink "/contact" }} aria-current="page"{{ end }}>Contact</a></li>
+      <li><a href="{{ "/contact/" | relURL }}"{{ if strings.HasPrefix .RelPermalink "/contact" }} class="nav__link--active" aria-current="page"{{ end }}>Contact</a></li>
+      <li><a href="{{ "/afspraak/" | relURL }}" class="nav__cta{{ if strings.HasPrefix .RelPermalink "/afspraak" }} nav__link--active{{ end }}"{{ if strings.HasPrefix .RelPermalink "/afspraak" }} aria-current="page"{{ end }}>Afspraak</a></li>
     </ul>
   </div>
 </nav>

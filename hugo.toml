@@ -10,3 +10,5 @@ theme = 'laurenhendriks'
   description = 'Orthomoleculair therapeut | voeding · gezondheid · leefstijl'
   formspreeEndpoint = 'https://formspree.io/f/mbdewjlp'
   hasPhoto = false
+  calendlyUrl = ''
+  hasCalendly = false
