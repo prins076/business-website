@@ -1,0 +1,4 @@
+{{- /* Renders inner content only when online booking (Calendly) is enabled.
+       Use with the percent form so the inner is rendered as Markdown:
+       {{% if-booking %}} ...markdown... {{% /if-booking %}} */ -}}
+{{- if site.Params.hasCalendly }}{{ .Inner }}{{ end -}}
