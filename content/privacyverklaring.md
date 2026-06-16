@@ -17,13 +17,27 @@ De verwerkingsverantwoordelijke voor je gegevens is:
 
 ## Welke gegevens verwerk ik?
 
+{{% unless-booking %}}
 Deze website verzamelt alleen gegevens die je zelf invult in het contactformulier:
+{{% /unless-booking %}}
+{{% if-booking %}}
+Deze website verzamelt gegevens die je zelf invult:
+{{% /if-booking %}}
 
 - je naam;
 - je e-mailadres;
 - de inhoud van je bericht.
 
+{{% if-booking %}}
+Als je via de afsprakenpagina een gesprek inplant, verwerk ik daarnaast je naam, je e-mailadres en het door jou gekozen tijdstip.
+{{% /if-booking %}}
+
+{{% unless-booking %}}
 De website gebruikt **geen cookies, geen tracking en geen analyse-software**. Er worden dus geen gegevens over je surfgedrag verzameld.
+{{% /unless-booking %}}
+{{% if-booking %}}
+De website zelf gebruikt **geen cookies, tracking of analyse-software**. Wanneer je op de afsprakenpagina kiest om de online agenda te laden, plaatst **Calendly** functionele cookies die nodig zijn om een afspraak te kunnen plannen. Zolang je daar niet op klikt, worden er geen cookies geplaatst.
+{{% /if-booking %}}
 
 ## Waarom en op welke grondslag?
 
@@ -33,8 +47,18 @@ Ik gebruik deze gegevens uitsluitend om je bericht te beantwoorden en contact me
 
 Om de website en het contactformulier te laten werken, maak ik gebruik van de volgende verwerkers:
 
+<!-- NB: de Formspree- en GitHub-regels staan bewust dubbel — één lijst zonder en
+     één lijst mét Calendly — zodat de juiste lijst verschijnt op basis van de
+     hasCalendly-instelling. Pas je een van deze regels aan, doe dat dan in beide lijsten. -->
+{{% unless-booking %}}
 - **Formspree** — verwerkt de inzending van het contactformulier en stuurt deze als e-mail naar mij. Formspree is gevestigd in de Verenigde Staten.
 - **GitHub Pages** — host deze website. De server verwerkt daarbij technische gegevens zoals je IP-adres in logbestanden. GitHub is gevestigd in de Verenigde Staten.
+{{% /unless-booking %}}
+{{% if-booking %}}
+- **Formspree** — verwerkt de inzending van het contactformulier en stuurt deze als e-mail naar mij. Formspree is gevestigd in de Verenigde Staten.
+- **GitHub Pages** — host deze website. De server verwerkt daarbij technische gegevens zoals je IP-adres in logbestanden. GitHub is gevestigd in de Verenigde Staten.
+- **Calendly** — verwerkt je afspraakgegevens (naam, e-mailadres en het gekozen tijdstip) wanneer je via de afsprakenpagina een gesprek inplant. Calendly is gevestigd in de Verenigde Staten.
+{{% /if-booking %}}
 
 Omdat deze partijen buiten de Europese Economische Ruimte (EER) zijn gevestigd, kan doorgifte van gegevens naar de Verenigde Staten plaatsvinden. Deze partijen bieden hiervoor passende waarborgen. Ik verkoop je gegevens nooit aan derden.
 
