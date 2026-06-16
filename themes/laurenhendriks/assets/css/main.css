@@ -515,3 +515,12 @@ img { max-width: 100%; height: auto; display: block; }
 .hero__actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .btn--ghost { background: transparent; border: 1px solid rgba(255,255,255,.7); color: #fff; }
 .btn--ghost:hover { background: rgba(255,255,255,.12); }
+
+/* Testimonials */
+.testimonials { padding: 4rem 0; background: var(--color-light, #FAFAF7); }
+.testimonials__heading { text-align: center; }
+.testimonials__grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 2rem; }
+.testimonial { margin: 0; padding: 2rem; background: var(--color-surface, #E8E2D8); border-radius: var(--radius, 8px); }
+.testimonial__quote { margin: 0 0 1rem; font-family: var(--font-heading, 'Cormorant Garamond', serif); font-size: 1.3rem; font-style: italic; line-height: 1.5; }
+.testimonial__cite { font-size: .95rem; font-weight: 700; }
+.testimonial__context { font-weight: 400; opacity: .7; }
