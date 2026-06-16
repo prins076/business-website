@@ -9,13 +9,13 @@
 <section class="aanbod">
   <div class="container">
 
-    <div class="intake-card">
+    <div class="intake-card" data-reveal>
       <h2>Kennismakingsgesprek &amp; intake</h2>
       <p>Elk traject begint met een persoonlijk kennismakingsgesprek. Hier leer ik je kennen: jouw klachten, jouw doelen en jouw leefstijl. Op basis van dit gesprek bepalen we samen welke stap het beste bij jou past — geen aannames, geen standaardoplossingen.</p>
       <a href="{{ "/afspraak/" | relURL }}" class="btn btn--light">Plan een kennismaking</a>
     </div>
 
-    <div class="options-section">
+    <div class="options-section" data-reveal>
       <h2>Wat kan er volgen?</h2>
       <div class="section-divider"></div>
       <p>Afhankelijk van de intake adviseer ik wat het beste bij jouw situatie past. Dat kan zijn:</p>
@@ -36,7 +36,7 @@
     </div>
 
     {{ with .Params.programs }}
-    <div class="programs-section">
+    <div class="programs-section" data-reveal>
       <h2>Trajecten</h2>
       <div class="section-divider"></div>
       <p>Voor wie een dieper traject past, bied ik de volgende begeleiding aan. Hoe lang een traject duurt verschilt per persoon — dat kan weken zijn, maar ook maanden.</p>
