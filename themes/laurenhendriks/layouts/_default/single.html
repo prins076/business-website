@@ -1,0 +1,17 @@
+{{ define "main" }}
+<header class="page-header">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-header__sub">{{ . }}</p>{{ end }}
+  </div>
+</header>
+
+<section class="legal">
+  <div class="container">
+    {{ with .Params.updated }}<p class="legal__updated">Laatst bijgewerkt: {{ . }}</p>{{ end }}
+    <div class="legal__body">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}
