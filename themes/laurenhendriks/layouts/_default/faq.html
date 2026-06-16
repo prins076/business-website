@@ -8,7 +8,7 @@
 
 <section class="faq">
   <div class="container faq__container">
-    {{ with site.Data.faq }}
+    {{ with hugo.Data.faq }}
     {{ range . }}
     <details class="faq__item">
       <summary class="faq__question">{{ .question }}</summary>
