@@ -524,3 +524,13 @@ img { max-width: 100%; height: auto; display: block; }
 .testimonial__quote { margin: 0 0 1rem; font-family: var(--font-heading, 'Cormorant Garamond', serif); font-size: 1.3rem; font-style: italic; line-height: 1.5; }
 .testimonial__cite { font-size: .95rem; font-weight: 700; }
 .testimonial__context { font-weight: 400; opacity: .7; }
+
+/* FAQ */
+.faq { padding: 3rem 0 5rem; }
+.faq__container { max-width: 760px; }
+.faq__item { border-bottom: 1px solid var(--color-surface); padding: 1.25rem 0; }
+.faq__question { cursor: pointer; font-family: var(--font-heading); font-size: 1.4rem; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+.faq__question::after { content: '+'; font-size: 1.5rem; line-height: 1; opacity: .6; }
+.faq__item[open] .faq__question::after { content: '–'; }
+.faq__question::-webkit-details-marker { display: none; }
+.faq__answer { padding-top: 1rem; line-height: 1.7; }

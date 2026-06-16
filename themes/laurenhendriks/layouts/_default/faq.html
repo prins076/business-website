@@ -1,0 +1,23 @@
+{{ define "main" }}
+<header class="page-header">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="page-header__sub">{{ . }}</p>{{ end }}
+  </div>
+</header>
+
+<section class="faq">
+  <div class="container faq__container">
+    {{ with site.Data.faq }}
+    {{ range . }}
+    <details class="faq__item">
+      <summary class="faq__question">{{ .question }}</summary>
+      <div class="faq__answer">{{ .answer | markdownify }}</div>
+    </details>
+    {{ end }}
+    {{ else }}
+    <p>Er zijn nog geen vragen toegevoegd.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
